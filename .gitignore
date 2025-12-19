@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and state files
+*.log
+*.json
+debug_page.html
+nba_reminder_state.json
+nba_reminder.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+
