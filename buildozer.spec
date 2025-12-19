@@ -30,6 +30,12 @@ android.permissions = INTERNET,POST_NOTIFICATIONS
 # (int) 目标Android API，应该尽可能高
 android.api = 33
 
+# (str) Android NDK版本
+android.ndk = 23b
+
+# (str) Android SDK Build-Tools版本
+android.sdk_build_tools = 34.0.0
+
 # (int) 最小Android API
 android.minapi = 21
 
