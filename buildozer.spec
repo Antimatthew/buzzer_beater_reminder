@@ -33,8 +33,8 @@ android.api = 33
 # (str) Android NDK版本
 android.ndk = 23b
 
-# (str) Android SDK Build-Tools版本
-android.sdk_build_tools = 34.0.0
+# (str) Android SDK Build-Tools版本（不指定，让buildozer自动选择）
+# android.sdk_build_tools = 34.0.0
 
 # (int) 最小Android API
 android.minapi = 21
