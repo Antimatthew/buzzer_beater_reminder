@@ -34,10 +34,20 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v2
       
+    - name: Accept Android SDK licenses
+      run: |
+        yes | sdkmanager --licenses || true
+        sdkmanager "build-tools;34.0.0" "platforms;android-33"
+      env:
+        ANDROID_HOME: ${{ env.ANDROID_HOME }}
+        ANDROID_SDK_ROOT: ${{ env.ANDROID_HOME }}
+        PATH: ${{ env.ANDROID_HOME }}/cmdline-tools/latest/bin:${{ env.ANDROID_HOME }}/platform-tools:${{ env.PATH }}
+      
     - name: Build APK with Buildozer
       env:
         ANDROID_HOME: ${{ env.ANDROID_HOME }}
         ANDROID_SDK_ROOT: ${{ env.ANDROID_HOME }}
+        PATH: ${{ env.ANDROID_HOME }}/cmdline-tools/latest/bin:${{ env.ANDROID_HOME }}/platform-tools:${{ env.PATH }}
       run: |
         buildozer android debug
       continue-on-error: true
